@@ -66,6 +66,12 @@ const PhotoHolder: React.FC = () => {
               strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
               rotate: [120, 360],
             }}
+            transition= {{
+              duration: 15,
+              repeat: Infinity,
+              repeatType: "reverse",
+              //repeatDelay: 5,
+            }}
           />
         </motion.svg>
       </motion.div>
