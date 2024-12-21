@@ -109,35 +109,3 @@ export const resumeExperience = {
     ],
 };*/
 
-/*export const resumeSkills = {
-    title: "",
-    description: "",
-    skillList: [
-        {
-            icon: </>,
-            title: "",
-        },
-        {
-            icon: <FaHtml5 />,
-            title: "HTML",
-        },
-    ],
-};
-
-export const resumeSkills: {
-    title: string;
-    description: string;
-    skillList: {
-        icon: JSX.Element;
-        title: string;
-    }[];
-} = {
-    title: "afga",
-    description: "agdfjkdkjjkjfgvjdf",
-    skillList: [
-        {
-            icon: JSX.Element,
-            title: "HTML",
-        },
-    ],
-};*/
