@@ -60,7 +60,20 @@ export const resumeExperience: {
 };
 
 
-
+export const socialMedia = [
+    {
+      id: 1,
+      img: "/assets/git.svg",
+    },
+    /*{
+      id: 2,
+      img: "/twit.svg",
+    },*/
+    {
+      id: 3,
+      img: "/assets/link.svg",
+    },
+];
 
 /*export const resumeAbout = {
     title: "",
