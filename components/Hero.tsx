@@ -1,25 +1,43 @@
 import React from 'react'
 import PhotoHolder from './PhotoHolder';
+import { LampContainer } from './ui/lamp';
 
 const Hero = () => {
   return (
-    <section className="h-dvh scroll-mt-7" id="/">
-    <div className="container mx-auto pt-65 h-full">
-    <div className="flex flex-col xl:flex-row items-center justify-between pt-10 xl:pt-16 pb-16 xl:pb-24 ">
-    {/* text */}
-    <div className="text-center xl:text-left order-2 xl:order-none">
-    <span className="text-xl">Web Developer</span>
-    <h1 className="h1">
-    Hello I&apos;m <br /> <span className='text-myColor-teal4 text-teal'>Md. Golam Azam</span>
-    </h1>
-    <p className="max-w-[500px] mb-9 text-white/90">I am proficient in various programming languages and technologies and honing towards Web Development to outstand.</p>
-    </div>
-    {/* photo */}
-    <div className="order-1 xl:order-none mb-8 xl:mb-0">
-        <PhotoHolder />
-    </div>
-    </div>
-    </div>
+    <section className="min-h-svh scroll-mt-7" id="/">
+      <div className="pt-65 container mx-auto h-full">
+        {/*<div className="">
+          <LampContainer>
+          <p className="mb-9 max-w-[500px] text-white/90">
+              I am proficient in various programming languages and technologies
+              and honing towards Web Development to outstand.
+            </p>
+          </LampContainer>
+        </div>*/}
+        <div className="flex flex-col xl:flex-row items-center justify-between pb-16 pt-10 xl:pb-24 xl:pt-16">
+          {/* text */}
+          <div className="order-2 text-center xl:order-none xl:text-left">
+            <h1 className="h1">
+              Hello, I&apos;m <br />{' '}
+              <span className="text-primary">
+                Md. Golam Azam
+              </span>
+            </h1>
+            {/*<span className="text-xl">
+              Web and Mobile Application Developer
+            </span>*/}
+            <br />
+            <p className="mt-7 mb-9 max-w-[500px] text-neutral-950/90 dark:text-white/90 text-base">
+              I am proficient in various programming languages and technologies
+              and honing towards <span className='font-bold'> Web and Mobile Application Development </span> to outstand among others.
+            </p>
+          </div>
+          {/* photo */}
+          <div className="order-1 mb-8 xl:order-none xl:mb-0">
+            <PhotoHolder />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

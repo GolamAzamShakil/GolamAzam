@@ -6,7 +6,7 @@ const FooterPage = () => {
   return (
     <section className="w-full mt-60 pb-6 scroll-mt-7" id="footer">
       <footer className="max-h-80">
-        <hr className="h-px w-3/4 mx-auto bg-gray-700"/>
+        <hr className="h-px w-3/4 mx-auto bg-gray-700/20 border-gray-100/15 dark:border-gray-500/15"/>
           <div className="flex mt-24 mb-2 flex-col gap-3 justify-between items-center">
           <div className="flex items-center md:gap-3 gap-6">
             {socialMedia.map((info) => (

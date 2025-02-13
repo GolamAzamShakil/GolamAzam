@@ -70,6 +70,11 @@ export const socialMedia = [
       lnk: "bubt.edu.bd"
     },*/
     {
+        id: 2,
+        img: "/assets/emailLogo1White.svg",
+        lnk: "mailto:golamazam1010@gmail.com",
+    },
+    {
       id: 3,
       img: "/assets/link.svg",
       lnk: "https://www.linkedin.com/in/md-golam-azam-4a6a30291/",

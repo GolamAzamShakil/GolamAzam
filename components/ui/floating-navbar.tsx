@@ -61,7 +61,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex w-fit fixed top-10 inset-x-0 mx-auto border px-6 py-3 text-sm md:text-base pointer-events-auto bg-neutral-800/80 items-center justify-center space-x-4 border-white/[0.2] rounded-lg z-[5000]",
+          "flex w-fit fixed top-10 inset-x-0 mx-auto border px-6 py-3 text-sm md:text-base pointer-events-auto bg-neutral-500/30 dark:bg-neutral-950 items-center justify-center space-x-4 border-white/[0.2] rounded-lg z-[5000]",
           className
         )}
         style={{
@@ -80,7 +80,7 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="sm:block text-sm capitalize font-medium rounded-md p-2 hover:bg-teal-400/70 text-neutral-200 hover:text-neutral-50 transition duration-200">{navItem.name}</span>
+            <span className="sm:block text-sm capitalize font-medium rounded-md p-2 hover:bg-teal-400/70 text-neutral-700 dark:text-neutral-200 hover:text-neutral-50 transition duration-200">{navItem.name}</span>
           </Link>
         ))}
         {/*<button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
