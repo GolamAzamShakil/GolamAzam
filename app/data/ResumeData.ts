@@ -1,5 +1,3 @@
-import { FaHtml5 } from 'react-icons/fa';
-
 
 export const resumeAbout: {
     title: string;
@@ -64,16 +62,22 @@ export const socialMedia = [
     {
       id: 1,
       img: "/assets/git.svg",
+      lnk: "https://github.com/GolamAzamShakil",
     },
     /*{
       id: 2,
-      img: "/twit.svg",
+      img: "/assets/bulbFigma2White.svg",
+      lnk: "bubt.edu.bd"
     },*/
     {
       id: 3,
       img: "/assets/link.svg",
+      lnk: "https://www.linkedin.com/in/md-golam-azam-4a6a30291/",
     },
 ];
+
+
+
 
 /*export const resumeAbout = {
     title: "",

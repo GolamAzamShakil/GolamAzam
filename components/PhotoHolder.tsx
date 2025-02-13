@@ -10,7 +10,8 @@ import {
 import Image from "next/image";
 
 const PhotoHolder: React.FC = () => {
-  const { scrollYProgress } = useScroll();
+  //const { scrollYProgress } = useScroll();
+
   return (
     <div className="w-full h-full relative">
       <motion.div
@@ -38,14 +39,14 @@ const PhotoHolder: React.FC = () => {
           />
         </motion.div>
 
-        <motion.div
+        {/*<motion.div
           style={{
             scaleX: scrollYProgress,
             x: "-50%",
             y: "-50%",
           }}
           className=""
-        />
+        />*/}
 
         <motion.svg
           className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"

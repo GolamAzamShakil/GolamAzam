@@ -8,7 +8,7 @@ const {
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
-  darkMode: ["class"],
+  darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -21,81 +21,68 @@ const config = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
+    },
+	 fontFamily: {
+		primary: "var(--font-jetbrainsMono)",
+	 },
+   screens : {
+    sm: "640px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+   },
+   extend: {
+    colors: {
+      border: 'hsl(var(--border))',
+      input: 'hsl(var(--input))',
+      ring: 'hsl(var(--ring))',
+      background: 'hsl(var(--background))',
+      foreground: 'hsl(var(--foreground))',
+      selection: {
+        DEFAULT: 'hsl(var(--selection))',
+        foreground: 'hsl(var(--selection-foreground))',
+      },
+      primary: {
+        DEFAULT: 'hsl(var(--primary))',
+        foreground: 'hsl(var(--primary-foreground))',
+      },
+      secondary: {
+        DEFAULT: 'hsl(var(--secondary))',
+        foreground: 'hsl(var(--secondary-foreground))',
+      },
+      destructive: {
+        DEFAULT: 'hsl(var(--destructive))',
+        foreground: 'hsl(var(--destructive-foreground))',
+      },
+      muted: {
+        DEFAULT: 'hsl(var(--muted))',
+        foreground: 'hsl(var(--muted-foreground))',
+      },
+      accent: {
+        DEFAULT: 'hsl(var(--accent))',
+        foreground: 'hsl(var(--accent-foreground))',
+      },
+      popover: {
+        DEFAULT: 'hsl(var(--popover))',
+        foreground: 'hsl(var(--popover-foreground))',
+      },
+      card: {
+        DEFAULT: 'hsl(var(--card))',
+        foreground: 'hsl(var(--card-foreground))',
       },
     },
-	fontFamily: {
-		primary: "var(--font-jetbrainsMono)",
-	},
-    extend: {
-      colors: {
-        black: {
-          DEFAULT: "#000",
-          100: "#000319",
-		  1010: "#121212",
-          200: "rgba(17, 25, 40, 0.75)",
-          300: "rgba(255, 255, 255, 0.125)",
-        },
-        white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
-		  1010: "#F1F0E8",
-          200: "#C1C2D3",
-        },
-        blue: {
-          "100": "#E4ECFF",
-        },
-		'myColor': {
-			teal1: "#75edda",
-			Teal2: "#8cd5d5",
-			Teal3: "#19acac",
-			teal4: "#8bf0e0",
-			Peach1: "#ff7733",
-		},
-        purple: "#CBACF9",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-		  customPeach: "#ff7733",
-		  customTeal: "#19acac",
-		  customTeal2: "#8cd5d5",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+    borderRadius: {
+      lg: 'var(--radius)',
+      md: 'calc(var(--radius) - 2px)',
+      sm: 'calc(var(--radius) - 4px)',
+    },
+
+    textColor: {
+      primary: {
+        DEFAULT: 'hsl(var(--primary-text))',
+        foreground: 'hsl(var(--primary-foreground))',
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+    },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -217,3 +204,75 @@ function addVariablesForColors({ addBase, theme }: any) {
 }
 
 export default config;
+
+
+/*
+
+      colors: {
+        black: {
+          DEFAULT: "#000",
+          100: "#000319",
+		      1010: "#121212",
+          200: "rgba(17, 25, 40, 0.75)",
+          300: "rgba(255, 255, 255, 0.125)",
+        },
+        white: {
+          DEFAULT: "#FFF",
+          100: "#BEC1DD",
+		     1010: "#F1F0E8",
+          200: "#C1C2D3",
+        },
+        blue: {
+          "100": "#E4ECFF",
+        },
+		   'myColor': {
+			    teal1: "#75edda",
+			    Teal2: "#8cd5d5",
+			    Teal3: "#19acac",
+			    teal4: "#8bf0e0",
+			    Peach1: "#ff7733",
+		    },
+        purple: "#CBACF9",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+		  customPeach: "#ff7733",
+		  customTeal: "#19acac",
+		  customTeal2: "#8cd5d5",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+*/

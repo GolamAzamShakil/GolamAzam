@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import {
   motion,
@@ -8,6 +9,7 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const FloatingNav = ({
   navItems,
@@ -41,6 +43,9 @@ export const FloatingNav = ({
     }
   });
 
+  const pathname = usePathname();
+  //console.log(pathname);
+
   return (
     <AnimatePresence mode="wait">
       <motion.div
@@ -56,13 +61,13 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border px-10 py-5  items-center justify-center space-x-4 border-white/[0.2] rounded-lg z-[5000]",
+          "flex w-fit fixed top-10 inset-x-0 mx-auto border px-6 py-3 text-sm md:text-base pointer-events-auto bg-neutral-800/80 items-center justify-center space-x-4 border-white/[0.2] rounded-lg z-[5000]",
           className
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(44, 14, 89, 0.15)",
-          borderRadius: "10px",
+          //backgroundColor: "rgba(0,0,0,0)", //"rgba(44, 14, 89, 0.15)",
+          //borderRadius: "10px",
           border: "1px solid rgba(255, 255, 255, 0.525)",
         }}
       >
@@ -71,11 +76,11 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 dark:hover:text-neutral-300 hover:text-neutral-500 hover:border-b-2 border-myColor-Teal3"
+              "relative dark:text-neutral-50 items-center flex dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
+            <span className="sm:block text-sm capitalize font-medium rounded-md p-2 hover:bg-teal-400/70 text-neutral-200 hover:text-neutral-50 transition duration-200">{navItem.name}</span>
           </Link>
         ))}
         {/*<button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
@@ -91,3 +96,4 @@ export const FloatingNav = ({
 
 //shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]
 //text-neutral-600
+//className={`${navItem.link === pathname && "border-b-2 border-myColor-Teal3"}sm:block text-sm capitalize font-medium hover:text-myColor-Teal3 transition-all`}
