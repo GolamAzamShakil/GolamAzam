@@ -29,7 +29,7 @@ const Hero = () => {
             <br />
             <p className="mt-7 mb-9 max-w-[500px] text-neutral-950/90 dark:text-white/90 text-base">
               I am proficient in various programming languages and technologies
-              and honing towards <span className='font-bold'> Web and Mobile Application Development </span> to outstand among others.
+              and honing towards <span className='text-xl font-bold'> Web and Mobile Application Development </span> to outstand.
             </p>
           </div>
           {/* photo */}

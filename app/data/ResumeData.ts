@@ -1,4 +1,6 @@
 
+
+
 export const resumeAbout: {
     title: string;
     description: string;
@@ -71,7 +73,7 @@ export const socialMedia = [
     },*/
     {
         id: 2,
-        img: "/assets/emailLogo1White.svg",
+        img: "/assets/gmailWhite.svg",
         lnk: "mailto:golamazam1010@gmail.com",
     },
     {
